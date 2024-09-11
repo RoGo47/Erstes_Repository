@@ -20,7 +20,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y g++
 
     - name: Build the application
-      run: g++ -o Erstes_Repository Erstes_File
+      run: g++ -o Erstes_Repository Erstes_File.cpp
 
     - name: Run the application
       run: ./Erstes_Repository
