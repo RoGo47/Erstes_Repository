@@ -20,7 +20,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y g++
 
     - name: Build the application
-      run: g++ -o HelloWorld main.cpp
+      run: g++ -o HelloWorld Erstes_File
 
     - name: Run the application
       run: ./HelloWorld
