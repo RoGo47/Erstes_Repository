@@ -31,3 +31,9 @@ jobs:
     - name: Run the application
       run: ./Erstes_Repository
 
+   - name: Build the application
+      run: g++ -o Erstes_Repository zweites_File.cpp
+
+    - name: Run the application
+      run: ./Erstes_Repository
+
