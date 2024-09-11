@@ -36,6 +36,7 @@ jobs:
 
     - name: Run the application
       run: ./Erstes_Repository
+    
 
 
 
