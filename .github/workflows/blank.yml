@@ -17,25 +17,19 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Install dependencies
-      run: sudo apt-get update && sudo apt-get install -y g++
+      run: sudo apt-get update && sudo apt-get install -y clang clang-tidy g++
 
-    - name: Build the application
-      run: g++ -o Erstes_Repository Erstes_File.cpp
-
-    - name: Run the application
-      run: ./Erstes_Repository
-
-    - name: Build the application
-      run: g++ -o Erstes_Repository main.cpp
+    - name: Compile the application
+      run: g++ -o HelloWorld main.cpp test.cpp
 
     - name: Run the application
-      run: ./Erstes_Repository
+      run: ./HelloWorld
 
-    - name: Build the application
-      run: g++ -o Erstes_Repository test.cpp
+    - name: Run clang-tidy
+      run: clang-tidy main.cpp -- -std=c++17
 
-    - name: Run the application
-      run: ./Erstes_Repository
+    - name: Run the tests
+      run: ./HelloWorld && echo "All tests passed!"
     
 
 
