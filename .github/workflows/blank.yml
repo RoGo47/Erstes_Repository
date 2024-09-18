@@ -20,7 +20,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y clang clang-tidy g++
 
     - name: Compile the application
-      run: g++ -o HelloWorld main.cpp test.cpp
+      run: g++ -o HelloWorld main.cpp 
 
     - name: Run the application
       run: ./HelloWorld
